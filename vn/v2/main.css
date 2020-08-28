@@ -1,0 +1,427 @@
+.order-modal, .users-online {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    width: 320px;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    transition: all 1s;
+    font-size: 19px;
+    line-height: 22px;
+    border-radius: 10px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden
+}
+
+.order-modal > div, .users-online > div {
+    margin: 10px
+}
+
+.order-modal > div > span, .users-online > div > span {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 75px);
+    margin-left: 10px
+}
+
+.show-order, .show-order-last {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s
+}
+
+.blink {
+    color: red !important;
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    text-decoration: line-through
+}
+
+.blink_me {
+    font-size: 24px;
+    color: red;
+    font-weight: 700
+}
+
+.show-order-last:before, .show-order:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.show-order-last:after, .show-order-last:before, .show-order:after, .show-order:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -15px;
+    width: 15px;
+    height: 5px;
+    background: red;
+    transition: all 1s
+}
+
+.show-order-last:after, .show-order:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.everad-sprite {
+    background: url("5c9c4b1226b9818d369a3c558e2e98201afad7da.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px
+}
+
+.everad-sprite-bucket {
+    background-position: -5px -5px
+}
+
+.everad-sprite-callback {
+    background-position: -65px -5px
+}
+
+.everad-sprite-online_user {
+    background-position: -5px -65px
+}
+
+@media screen and (max-width: 767px) {
+    .cookie-popup-on .order-modal, .cookie-popup-on .users-online {
+        top: auto;
+        right: 10px;
+        bottom: 35px;
+        width: 300px
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .cookie-popup-on .order-modal, .cookie-popup-on .users-online {
+        bottom: 45px
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .cookie-popup-on .order-modal, .cookie-popup-on .users-online {
+        bottom: 60px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .order-modal, .users-online {
+        top: auto;
+        right: 10px;
+        bottom: 10px;
+        width: 300px
+    }
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+<
+/
+style > < style > .ever-popup-build {
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    left: -9999px;
+}
+
+<
+/
+style > < style > .ever-popup__body.ever-mobile {
+    display: none
+}
+
+.ever-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 111;
+    display: none;
+    overflow: auto;
+}
+
+.ever-popup__body {
+    position: static;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: auto
+}
+
+.ever-popup.show {
+    display: block;
+    align-items: center;
+}
+
+.ever-popup__inner {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 35px
+}
+
+.ever-popup__close {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.ever-popup__close:after, .ever-popup__close:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 35px;
+    height: 10px;
+    background: #fff;
+    transition: all 1s;
+}
+
+.ever-popup__close:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.ever-popup__close:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1000px) {
+    .ever-popup__body.ever-desktop {
+        display: none
+    }
+
+    .ever-popup__body.ever-mobile {
+        display: block
+    }
+}
+
+<
+/
+style > < style > .main-banner img {
+    max-width: 61px;
+    max-height: 49px;
+    margin: 0 !important
+}
+
+.main-banner {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #e30c0c;
+    background-image: url("urn:scrapbook:download:error:http://b.as.varikosette-new.com/img/banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 97
+}
+
+.main-banner.banner-bottom {
+    top: auto;
+    bottom: 0
+}
+
+.main-banner p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-family: Roboto, sans-serif;
+    color: #fff !important;
+    margin-left: 20px;
+    text-align: center;
+    padding: 10px 0
+}
+
+.main-banner p b {
+    color: #fff;
+    display: block;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 5px
+}
+
+.main-banner p .ban-small {
+    color: #fff;
+    display: block;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 400
+}
+
+@media screen and (max-width: 1219px) {
+    .main-banner p .ban-small {
+        font-size: 15px;
+    }
+
+    .main-banner p b {
+        font-size: 17px;
+    }
+
+    .main-banner img {
+        max-width: 50px;
+        max-height: 40px
+    }
+
+    .main-banner p {
+        max-width: 920px
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .main-banner .delete_mob {
+        display: none
+    }
+
+    .main-banner p {
+        max-width: 500px
+    }
+
+    .main-banner p b {
+        font-size: 16px
+    }
+
+    .main-banner p .ban-small {
+        font-size: 15px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-banner p {
+        max-width: 420px
+    }
+
+    .main-banner p b {
+        font-size: 15px
+    }
+
+    .main-banner p .ban-small {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .main-banner img {
+        max-width: 35px;
+        max-height: 30px
+    }
+
+    .main-banner p {
+        margin-left: 10px
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .main-banner img {
+        max-width: 50px;
+        max-height: 100%
+    }
+
+    .main-banner p {
+        max-width: 250px;
+        line-height: 1.1
+    }
+
+    .main-banner p b {
+        line-height: 18px;
+        font-size: 13px;
+        margin-bottom: 2px
+    }
+
+    .main-banner p .ban-small {
+        line-height: 17px;
+        font-size: 12px
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .main-banner img {
+        max-width: 35px
+    }
+}
+
+.main-banner p span {
+    color: #fff !important
+}
+
+.main-banner * {
+    box-sizing: border-box
+}
+
+.ever-popup-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
